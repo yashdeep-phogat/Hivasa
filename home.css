@@ -1,0 +1,309 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f8fb 0%, #e3f2fd 100%);
+    color: #222;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+    color: #fff;
+    padding: 40px 0 28px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px #0002;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+nav {
+    background: #1565c0;
+    padding: 12px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px #0001;
+    overflow-x: auto;
+    position: relative;
+    overflow: visible; /* Make sure dropdown is not clipped */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 600;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    min-width: 44px; /* For tap targets */
+}
+
+nav a:hover, nav a:focus {
+    background: #42a5f5;
+    color: #fff;
+    box-shadow: 0 2px 8px #42a5f533;
+    outline: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.hero {
+    background: linear-gradient(120deg, #e3f2fd 70%, #bbdefb 100%);
+    padding: 48px 24px 38px 24px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 16px #1976d211;
+    margin-bottom: 36px;
+    transition: box-shadow 0.2s;
+}
+
+.hero:hover {
+    box-shadow: 0 8px 32px #1976d222;
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 2.3rem;
+    color: #1976d2;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.18rem;
+    color: #333;
+    margin-top: 18px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1 1 280px;
+    background: #fff;
+    padding: 30px 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #1976d211;
+    transition: transform 0.18s, box-shadow 0.18s;
+    min-width: 260px;
+    max-width: 340px;
+    text-align: left;
+    animation: fadeInUp 1.2s;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.feature:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px #1976d222;
+}
+
+.feature h3 {
+    margin-top: 0;
+    color: #1976d2;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+footer {
+    background: #1976d2;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 18px 0;
+    margin-top: 60px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 8px #0001;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    background: #25d366;
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 0 2px 8px #0002;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.whatsapp-float:hover {
+    box-shadow: 0 4px 16px #25d36655;
+    transform: scale(1.08);
+}
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+@media (max-width: 600px) {
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px;
+    }
+    .whatsapp-float img {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .features {
+        gap: 20px;
+    }
+    .container {
+        margin: 28px auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .features {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .feature {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .hero {
+        padding: 32px 10px 28px 10px;
+    }
+    header {
+        padding: 28px 0 18px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        padding: 8px 0;
+    }
+    nav a {
+        margin: 0 4px;
+        font-size: 1rem;
+        padding: 10px 8px;
+    }
+    .container {
+        padding: 0 4px;
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 0.98rem;
+    }
+    .feature {
+        padding: 18px 8px;
+    }
+    footer {
+        font-size: 0.95rem;
+    }
+    .whatsapp-float {
+        bottom: 12px;
+        right: 12px;
+        padding: 8px;
+    }
+    .whatsapp-float img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Add to home.css for dropdown styling */
+nav {
+    position: relative;
+    z-index: 1000;
+    overflow: visible; /* Make sure dropdown is not clipped */
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropbtn {
+    cursor: pointer;
+    padding-right: 18px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 2px 8px #0002;
+    border-radius: 6px;
+    top: 100%;
+    left: 0;
+    text-align: left;
+    z-index: 2000; /* Ensure dropdown is above other elements */
+}
+.dropdown-content a {
+    color: #1976d2;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    border-bottom: 1px solid #e3f2fd;
+    transition: background 0.2s, color 0.2s;
+    background: #fff;
+}
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+.dropdown-content a:hover {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}

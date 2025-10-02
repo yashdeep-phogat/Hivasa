@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Hivasa Pharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+        .container { max-width: 900px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 2px 12px #1976d211;}
+        h1 { color: #1976d2; font-size: 2.2rem; margin-bottom: 18px; }
+        .about-details { margin-bottom: 32px; font-size: 1.13rem; color: #222; }
+        .about-details strong { color: #1565c0; }
+        .about-highlights { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+        .highlight-box { background: #e3f2fd; border-radius: 8px; padding: 18px 22px; flex: 1 1 220px; box-shadow: 0 1px 6px #1976d211; }
+        .highlight-box h3 { color: #1976d2; margin-bottom: 8px; font-size: 1.08rem; }
+        .map-container { width: 100%; height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 8px #1976d211; margin-bottom: 24px;}
+        .map-container iframe { border: 0; width: 100%; height: 100%; }
+        .contact-info { background: #f4f8fb; border-radius: 8px; padding: 18px 22px; margin-bottom: 24px; box-shadow: 0 1px 6px #1976d211;}
+        .contact-info strong { color: #1976d2; }
+        @media (max-width: 700px) {
+            .container { padding: 14px; }
+            .about-highlights { flex-direction: column; gap: 14px; }
+            .map-container { height: 220px; }
+        }
+        .location-heading {
+            color: #1976d2;
+            margin-bottom: 12px;
+        }
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropbtn {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #155a8a;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <div class="dropdown">
+            <a href="Products.html" class="dropbtn">Products ▼</a>
+            <div class="dropdown-content">
+                <a href="cosmetics.html">Cosmetics</a>
+                <a href="nutraceuticals.html">Nutraceuticals</a>
+                <a href="ayurvedic.html">Ayurvedic</a>
+            </div>
+        </div>
+        <a href="research.html">Research</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="container">
+        <h1>About Hivasa Pharma</h1>
+        <div class="about-details">
+            <p>
+                <strong>Hivasa Pharma</strong> is a leading manufacturer and exporter of cosmetics, nutraceuticals, and ayurvedic products. Inspired by innovation and driven by quality, we deliver solutions that enhance health, beauty, and wellness.
+            </p>
+            <p>
+                Our state-of-the-art facility and expert team ensure every product meets international standards. We believe in sustainable practices, customer satisfaction, and continuous improvement.
+            </p>
+        </div>
+        <div class="about-highlights">
+            <div class="highlight-box">
+                <h3>Quality Assurance</h3>
+                <p>ISO, GMP, and FDA certified manufacturing with rigorous quality checks at every stage.</p>
+            </div>
+            <div class="highlight-box">
+                <h3>Innovative R&D</h3>
+                <p>Dedicated research team developing new formulations and improving existing products.</p>
+            </div>
+            <div class="highlight-box">
+                <h3>Global Presence</h3>
+                <p>Supplying to clients across India and worldwide, with a strong export network.</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>
+                <strong>Email:</strong> info@hivasapharma.com<br>
+        <h2 class="location-heading">Our Location</h2>
+                <strong>Address:</strong> 123 Main Street, Ahmedabad, Gujarat, India
+            </p>
+        </div>
+        <h2 class="location-heading">Our Location</h2>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=Ahmedabad,+Gujarat,+India&output=embed"
+                allowfullscreen="" aria-hidden="false" tabindex="0" title="Map showing the location of Hivasa Pharma in Ahmedabad, Gujarat, India">
+            </iframe>
+        </div>
+    </div>
+    <!-- WhatsApp Button Start -->
+    <a href="https://wa.me/917015868645" class="whatsapp-float" target="_blank" rel="noopener" title="Chat with us on WhatsApp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+    <!-- WhatsApp Button End -->
+</body>
+</html>
