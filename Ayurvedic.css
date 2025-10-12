@@ -1,44 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayurvedic</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #faf9f6;
-    }
-    h1 {
-      text-align: center;
-      padding: 20px;
-      color: #3c643c;
-    }
-    .pdf-container {
-      display: flex;
-      justify-content: center;
-      padding: 20px;
-    }
-    iframe {
-      width: 90%;
-      height: 800px;
-      border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <h1>Ayurvedic PDF</h1>
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f4f6f3;
+  color: #333;
+  line-height: 1.6;
+}
 
-  <div class="pdf-container">
-    <iframe 
-      src="https://drive.google.com/drive/folders/1QhXsU7scAny5nTFcqMixS66-AZX4eABl?usp=sharing" 
-      allow="autoplay">
-    </iframe>
-  </div>
+/* Heading */
+h1 {
+  text-align: center;
+  margin: 40px 0 20px 0;
+  color: #2a7f54;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
 
-</body>
-</html>
+/* PDF Container */
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+iframe {
+  width: 90%;
+  max-width: 1000px;
+  height: 800px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Download link */
+.download-link {
+  text-align: center;
+  margin: 30px 0 50px 0;
+}
+
+.download-link a {
+  display: inline-block;
+  background: #2a7f54;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-link a:hover {
+  background: #1e5e3e;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    height: 600px;
+  }
+
+  .download-link a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  iframe {
+    height: 400px;
+  }
+}
