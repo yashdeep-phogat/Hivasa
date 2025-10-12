@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayurvedic</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #faf9f6;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #faf9f6;
     }
     h1 {
       text-align: center;
-      padding: 20px;
+      margin: 20px 0;
       color: #3c643c;
     }
     .pdf-container {
@@ -25,7 +26,16 @@
       height: 800px;
       border: none;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      border-radius: 10px;
+      border-radius: 8px;
+    }
+    .download-link {
+      text-align: center;
+      margin: 20px;
+    }
+    .download-link a {
+      text-decoration: none;
+      color: #2a7f54;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -35,9 +45,15 @@
 
   <div class="pdf-container">
     <iframe 
-      src="https://drive.google.com/drive/folders/1QhXsU7scAny5nTFcqMixS66-AZX4eABl?usp=sharing" 
+      src="https://drive.google.com/file/d/1_joovoLZpTx3H6Xk9f7GiQ_eQhojo1Ju/view?usp=drive_link" 
       allow="autoplay">
     </iframe>
+  </div>
+
+  <div class="download-link">
+    <a href="https://drive.google.com/file/d/1_joovoLZpTx3H6Xk9f7GiQ_eQhojo1Ju/view?usp=drive_link" target="_blank">
+      Download this PDF
+    </a>
   </div>
 
 </body>
