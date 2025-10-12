@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayurvedic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #faf9f6;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #3c643c;
+    }
+    .pdf-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    iframe {
+      width: 90%;
+      height: 800px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ayurvedic PDF</h1>
+
+  <div class="pdf-container">
+    <iframe 
+      src="https://drive.google.com/drive/folders/1QhXsU7scAny5nTFcqMixS66-AZX4eABl?usp=sharing" 
+      allow="autoplay">
+    </iframe>
+  </div>
+
+</body>
+</html>
