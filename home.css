@@ -45,6 +45,11 @@ nav {
     position: relative;
     overflow: visible; /* Make sure dropdown is not clipped */
 }
+nav .logo {
+    height: 50px; /* Adjust as needed */
+    width: auto;
+    margin-right: 20px;
+}
 
 nav a {
     color: #fff;
@@ -306,4 +311,5 @@ nav {
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
     display: block;
+
 }
